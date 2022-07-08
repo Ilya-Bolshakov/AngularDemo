@@ -31,12 +31,25 @@ namespace WebApi.Controllers
             .ToArray();
         }
 
+        //[HttpGet]
+        //public JsonResult Get()
+        //{
+        //    var data = Enumerable.Range(1, 5).Select(index => new WeatherForecast
+        //    {
+        //        Date = DateTime.Now.AddDays(index),
+        //        TemperatureC = Random.Shared.Next(-20, 55),
+        //        Summary = Summaries[Random.Shared.Next(Summaries.Length)]
+        //    })
+        //    .ToArray();
+        //    return new JsonResult(data);
+        //}
+
         [HttpGet]
         [Route("{id}")]
         public int GetString(int id)
         {
             return id;
         }
-
+        
     }
 }
