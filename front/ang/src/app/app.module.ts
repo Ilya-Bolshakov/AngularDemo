@@ -9,12 +9,14 @@ import { WeatherService } from './weather.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ShowWeatherComponent } from './weather/show-weather/show-weather.component';
+import { OneitemWeatherComponent } from './weather/oneitem-weather/oneitem-weather.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     WeatherComponent,
-    ShowWeatherComponent
+    ShowWeatherComponent,
+    OneitemWeatherComponent
   ],
   imports: [
     BrowserModule,
