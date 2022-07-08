@@ -1,12 +1,12 @@
 <div *ngIf="find;else otherFind">
     <div *ngIf="loaded; else otherLoaded">
-        <h2>Модель {{weatherItem.Id}}</h2>
+        <h2>ID: {{weatherItem.Id}}</h2>
         <div>
-            <p><b>Модель:</b> {{weatherItem.Date}}</p>
-            <p><b>Производитель:</b> {{weatherItem.TemperatureC}}</p>
-            <p><b>Цена:</b> {{weatherItem.TemperatureF}}</p>
-            <p><b>Цена:</b> {{weatherItem.Summary}}</p>
-            <p><a routerLink="/" class="nav-link">К списку моделей</a></p>
+            <p><b>Date:</b> {{weatherItem.Date}}</p>
+            <p><b>TemperatureC:</b> {{weatherItem.TemperatureC}}</p>
+            <p><b>TemperatureF:</b> {{weatherItem.TemperatureF}}</p>
+            <p><b>Summary:</b> {{weatherItem.Summary}}</p>
+            <p><a routerLink="/WeatherForecast" class="nav-link">Back to items</a></p>
         </div>
     </div>
     </div>

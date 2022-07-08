@@ -23,6 +23,7 @@ export class OneitemWeatherComponent implements OnInit {
     this.service.getWeatherToId(this.id)
     .subscribe((data: weather) => { 
       if(data != null) {
+        console.log(data)
         this.weatherItem = data; 
         this.loaded = true;
         this.find = true; 

@@ -1,8 +1,10 @@
 <app-show-weather></app-show-weather>
-<div class="container">
-    <label>Id прогноза</label>
-    <input type="text" [(ngModel)]="id">
-</div>
-<button class="m-1 btn btn-light btn-outline-primary"
+<div class="form-group">
+    <label for="inputID">ID</label>
+    <input type="text" [(ngModel)]="id" class="form-control" id="inputID"  placeholder="Enter ID">
+  </div>
+<button class="btn btn-primary"
 (click)="getItem()"
 routerLink="WeatherForecast/" Button>
+Enter
+</button>
