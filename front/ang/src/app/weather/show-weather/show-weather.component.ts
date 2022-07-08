@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { weather } from 'src/app/models/weather';
 import { WeatherService } from 'src/app/weather.service';
 
 @Component({
@@ -10,7 +11,7 @@ export class ShowWeatherComponent implements OnInit {
 
   constructor(private service:WeatherService) { }
 
-  WeatherList: any[] = [];
+  WeatherList: weather[] = [];
 
   ngOnInit(): void {
     this.refrestWeatherList();
