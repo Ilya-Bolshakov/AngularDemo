@@ -8,11 +8,15 @@ import { Observable } from 'rxjs';
 })
 export class WeatherService {
 
-  readonly APIUrl = "https://localhost:7049/api/Weather";
+  readonly APIUrl = "https://localhost:7049/api/WeatherForecast";
   constructor(private http:HttpClient) { }
 
   getWeather(): Observable<any[]> {
-    return this.http.get<any>(this.APIUrl + "WeatherForecast")
+    return this.http.get<any>(this.APIUrl)
+  }
+
+  getWeatherToDate(value: number): Observable<any[]> {
+    return this.http.get<any>(this.APIUrl + value)
   }
 
 }
