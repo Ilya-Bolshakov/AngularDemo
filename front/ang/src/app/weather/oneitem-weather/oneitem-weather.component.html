@@ -1,10 +1,30 @@
-<div *ngIf="loaded">
-    <h2>Модель {{weatherItem.Id}}</h2>
-    <div>
-        <p><b>Модель:</b> {{weatherItem.Date}}</p>
-        <p><b>Производитель:</b> {{weatherItem.TemperatureC}}</p>
-        <p><b>Цена:</b> {{weatherItem.TemperatureF}}</p>
-        <p><b>Цена:</b> {{weatherItem.Summary}}</p>
-        <p><a routerLink="/" class="nav-link">К списку моделей</a></p>
+<div *ngIf="find;else otherFind">
+    <div *ngIf="loaded; else otherLoaded">
+        <h2>Модель {{weatherItem.Id}}</h2>
+        <div>
+            <p><b>Модель:</b> {{weatherItem.Date}}</p>
+            <p><b>Производитель:</b> {{weatherItem.TemperatureC}}</p>
+            <p><b>Цена:</b> {{weatherItem.TemperatureF}}</p>
+            <p><b>Цена:</b> {{weatherItem.Summary}}</p>
+            <p><a routerLink="/" class="nav-link">К списку моделей</a></p>
+        </div>
     </div>
-</div>
+    </div>
+    
+
+<ng-template #otherFind>
+    <div>
+        <h2>        
+            Element not found
+        </h2>
+    </div>
+</ng-template>
+
+<ng-template #otherLoaded>
+    <div>
+        <h2>
+            Loading...
+        </h2>
+    </div>
+</ng-template>
+

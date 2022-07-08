@@ -13,13 +13,21 @@ export class OneitemWeatherComponent implements OnInit {
   weatherItem!: weather;
   id!: number;
   loaded: boolean = false;
+  find: boolean = false;
   constructor(private service:WeatherService, activeRoute: ActivatedRoute) {
     this.id = Number.parseInt(activeRoute.snapshot.params['id']);
    }
 
   ngOnInit(): void {  
+    
     this.service.getWeatherToId(this.id)
-    .subscribe((data: weather) => { this.weatherItem = data; this.loaded = true; });      
+    .subscribe((data: weather) => { 
+      if(data != null) {
+        this.weatherItem = data; 
+        this.loaded = true;
+        this.find = true; 
+      }
+    });      
   }
 
 }

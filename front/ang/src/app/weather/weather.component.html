@@ -1,1 +1,8 @@
 <app-show-weather></app-show-weather>
+<div class="container">
+    <label>Id прогноза</label>
+    <input type="text" [(ngModel)]="id">
+</div>
+<button class="m-1 btn btn-light btn-outline-primary"
+(click)="getItem()"
+routerLink="WeatherForecast/" Button>
